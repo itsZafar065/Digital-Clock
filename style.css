@@ -1,0 +1,73 @@
+sbody {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('images/photo-1559173525-d16dfd7c17fe.avif') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.clock-container {
+  z-index: 1;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0 0 10px;
+  color: #00ffe7;
+  text-shadow: 0 0 10px #00ffe7;
+  font-size: 2.5rem;
+}
+
+.clock {
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px cyan;
+}
+
+
+
+.date {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+  text-shadow: 0 0 5px #00f7ff;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .clock {
+    font-size: 3rem;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+}
